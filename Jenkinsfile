@@ -12,5 +12,11 @@ pipeline {
                 sh './gradlew -Dhttps.proxyHost=proxy1-rech.uphf.fr -Dhttps.proxyPort=3128 compileJava'
             }
         }
-}
+        stage('Test'){
+            steps{
+                sh './gradlew -Dhttps.proxyHost=proxy1-rech.uphf.fr -Dhttps.proxyPort=3128 test'
+        }
+        }
+            
+    }
 }
