@@ -19,7 +19,7 @@ pipeline {
         }
         stage('SonarQube'){
             steps{
-                sh "./gradlew sonar -Dsonar.projectKey=Projet-1 -Dsonar.projectName='Projet 1' -Dsonar.host.url=http://172.17.0.1:9000 -Dsonar.token=sqp_0002714bfc86c838247a17a34678111f907ed2a0"
+                sh "./gradlew sonar -Dsonar.projectKey=Projet-1 -Dsonar.projectName='Projet 1' -Dsonar.host.url=http://172.17.0.1:9000 -Dsonar.token=sqp_0002714bfc86c838247a17a34678111f907ed2a0 jacoco"
             }
         }
         stage('Jar'){
