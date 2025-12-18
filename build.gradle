@@ -24,6 +24,12 @@ repositories {
     mavenCentral()
 }
 
+jacocoTestReport {
+  reports {
+    xml.enabled false
+  }
+}
+
 test {
     useJUnitPlatform()
 }
