@@ -18,7 +18,9 @@ pipeline {
         }
         }
         stage('SonarQube'){
+            steps{
             sh'./gradlew -Dsonar.projectName='Projet 1' -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_b8ef7905b703b9726b441acba9a1e126f2d40e97'
+            }
         }
         
             
